@@ -18,14 +18,36 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         templateUrl: 'app/views/dashboard.html',
         data: {
           title: 'Dashboard'
-        }
+        },
+        controller: 'LatestPurchasesController',
+        controllerAs: 'vm'
       })
+        .state('home.lastweek', {
+            url: '/lastweek',
+            templateUrl: 'app/views/lastweek.html',
+            data: {
+                title: 'Last Week'
+            },
+            controller: 'LastWeekController',
+            controllerAs: 'vm'
+        })
         .state('home.purchase', {
-            url: '/purchase',
+            url: '/purchase/:id',
             templateUrl: 'app/views/purchase-view.html',
             data: {
                 title: 'Purchase Details'
-            }
+            },
+            controller: 'PurchaseController',
+            controllerAs: 'vm'
+        })
+        .state('home.suggestions', {
+            url: '/suggestions/:title/:price',
+            templateUrl: 'app/views/suggestions.html',
+            data: {
+                title: 'Suggestions Details'
+            },
+            controller: 'SuggestionsController',
+            controllerAs: 'vm'
         })
         .state('home.overpriced', {
             url: '/overpriced',

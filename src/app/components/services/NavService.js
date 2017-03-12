@@ -15,6 +15,11 @@
         sref: '.dashboard'
       },
       {
+        name: 'Last Week',
+        icon: 'lastweek',
+        sref: '.lastweek'
+      },
+      {
         name: 'Overpriced',
         icon: 'overpriced',
         sref: '.overpriced'
