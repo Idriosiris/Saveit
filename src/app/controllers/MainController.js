@@ -5,7 +5,9 @@
        .controller('MainController', [
           'navService', '$mdSidenav', '$mdBottomSheet', '$log', '$q', '$state', '$mdToast',
           MainController
-       ]);
+       ]).config(['$qProvider', function ($qProvider) {
+            $qProvider.errorOnUnhandledRejections(false);
+        }]);
 
   function MainController(navService, $mdSidenav, $mdBottomSheet, $log, $q, $state, $mdToast) {
     var vm = this;
@@ -60,9 +62,9 @@
 
           console.log("controller loaded");
 
-          /*vm.performAction = function(action) {
+          vm.close = function(action) {
             $mdBottomSheet.hide(action);
-          };*/
+          };
         }
     }
 
