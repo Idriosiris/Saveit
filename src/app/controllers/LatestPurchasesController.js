@@ -8,6 +8,5 @@
     function LatestPurchasesController() {
         var vm = this;
 
-        console.log("mike");
     }
 })();

@@ -20,6 +20,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           title: 'Dashboard'
         }
       })
+        .state('home.purchase', {
+            url: '/purchase',
+            templateUrl: 'app/views/purchase-view.html',
+            data: {
+                title: 'Purchase Details'
+            }
+        })
         .state('home.overpriced', {
             url: '/overpriced',
             templateUrl: 'app/views/overpriced.html',
